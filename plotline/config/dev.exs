@@ -1,11 +1,32 @@
 import Config
 
+# Load .env file (project root) into System env for tests, if present.
+# This ensures local .env values are available when running `mix test`.
+env_file = Path.expand("../.env", __DIR__)
+
+if File.exists?(env_file) do
+  env_file
+  |> File.stream!()
+  |> Stream.map(&String.trim/1)
+  |> Stream.reject(&(&1 == "" || String.starts_with?(&1, "#")))
+  |> Enum.each(fn line ->
+    case String.split(line, "=", parts: 2) do
+      [key, val] ->
+        val = String.trim(val, "\"' \t\r\n")
+        System.put_env(key, val)
+
+      _ ->
+        :ok
+    end
+  end)
+end
+
 # Configure your database
 config :plotline, Plotline.Repo,
-  username: "postgres",
-  password: "ironman11",
-  hostname: "localhost",
-  database: "plotline",
+  username: System.get_env("PGUSER") || "postgres",
+  password: System.get_env("PGPASSWORD") || "postgres",
+  hostname: System.get_env("PGHOST") || "localhost",
+  database: System.get_env("PGDATABASE") || "plotline_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10

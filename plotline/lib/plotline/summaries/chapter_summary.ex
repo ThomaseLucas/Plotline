@@ -12,7 +12,7 @@ defmodule Plotline.Summaries.ChapterSummary do
     field(:source_url, :string)
     field(:scraped_at, :utc_datetime)
 
-    belongs_to(:book, Plotline.Books)
+    belongs_to(:book, Plotline.Books.Book)
 
     timestamps(type: :utc_datetime)
   end

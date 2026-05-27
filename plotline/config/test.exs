@@ -1,5 +1,26 @@
 import Config
 
+# Load .env file (project root) into System env for tests, if present.
+# This ensures local .env values are available when running `mix test`.
+env_file = Path.expand("../.env", __DIR__)
+
+if File.exists?(env_file) do
+  env_file
+  |> File.stream!()
+  |> Stream.map(&String.trim/1)
+  |> Stream.reject(&(&1 == "" || String.starts_with?(&1, "#")))
+  |> Enum.each(fn line ->
+    case String.split(line, "=", parts: 2) do
+      [key, val] ->
+        val = String.trim(val, "\"' \t\r\n")
+        System.put_env(key, val)
+
+      _ ->
+        :ok
+    end
+  end)
+end
+
 # Only in tests, remove the complexity from the password hashing algorithm
 config :pbkdf2_elixir, :rounds, 1
 
@@ -9,10 +30,11 @@ config :pbkdf2_elixir, :rounds, 1
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :plotline, Plotline.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "plotline_test#{System.get_env("MIX_TEST_PARTITION")}",
+  username: System.get_env("PGUSER") || System.get_env("DB_USER") || "postgres",
+  password: System.get_env("PGPASSWORD") || System.get_env("DB_PASS") || "postgres",
+  hostname: System.get_env("PGHOST") || "localhost",
+  database:
+    System.get_env("PGDATABASE_TEST") || "plotline_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: System.schedulers_online() * 2
 
