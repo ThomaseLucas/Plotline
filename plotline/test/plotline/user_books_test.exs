@@ -50,7 +50,7 @@ defmodule Plotline.UserBooksTest do
     {:ok, book2} = Books.create_book(%{title: "B Book", author: "B", total_chapters: 3})
 
     {:ok, ub1} = UserBooks.create_user_book(user.id, book1.id, %{current_chapter_number: 1})
-    {:ok, ub2} = UserBooks.create_user_book(user.id, book2.id, %{current_chapter_number: 2})
+    {:ok, _ub2} = UserBooks.create_user_book(user.id, book2.id, %{current_chapter_number: 2})
 
     list = UserBooks.list_user_books(user.id)
     assert Enum.map(list, & &1.book_id) == Enum.sort(Enum.map(list, & &1.book_id))

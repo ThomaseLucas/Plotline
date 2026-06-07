@@ -2,7 +2,7 @@ defmodule Plotline.Books.Book do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @fields [:title, :author, :total_chapters, :hardcover_id, :cover_image_url]
+  @fields [:title, :author, :total_chapters, :hardcover_id, :cover_image_url, :chapter_summaries_slug]
   @required_fields [:title, :author]
 
   schema "books" do
@@ -11,6 +11,7 @@ defmodule Plotline.Books.Book do
     field(:total_chapters, :integer)
     field(:hardcover_id, :string)
     field(:cover_image_url, :string)
+    field(:chapter_summaries_slug, :string)
 
     timestamps(type: :utc_datetime)
   end
@@ -48,7 +49,7 @@ defmodule Plotline.Books.Book do
   """
   def import_changeset(book, attrs) do
     book
-    |> cast(attrs, [:title, :author, :total_chapters, :hardcover_id, :cover_image_url])
+    |> cast(attrs, [:title, :author, :total_chapters, :hardcover_id, :cover_image_url, :chapter_summaries_slug])
     |> validate_required(:title)
     |> validate_number(:total_chapters, greater_than: 0)
     |> unique_constraint(:title, name: :books_title_author_index)

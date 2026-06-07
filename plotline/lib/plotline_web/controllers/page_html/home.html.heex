@@ -1,66 +1,14 @@
-<Layouts.flash_group flash={@flash} />
-<div class="min-h-screen bg-slate-50 dark:bg-slate-900">
-  <div class="mx-auto max-w-[1200px] px-6">
-    <div class="grid grid-cols-[220px_1fr_280px] gap-6 py-8">
-      <!-- Sidebar -->
-      <aside class="col-start-1 rounded-lg bg-white/60 dark:bg-slate-800/60 p-4 shadow-sm border border-gray-100 dark:border-slate-700">
-        <div class="flex items-center gap-3">
-          <div class="h-8 w-8 rounded bg-rose-500"></div>
-          <div class="text-lg font-semibold">Plotline</div>
-        </div>
+<div class="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900">
+  <div class="space-y-4 text-center">
+    <%= if @current_scope && @current_scope.user do %>
+      <h1 class="text-2xl font-semibold text-slate-900 dark:text-slate-100">
+        You’re signed in as <%= @current_scope.user.email %>
+      </h1>
+    <% end %>
 
-        <nav class="mt-6 flex flex-col gap-1 text-sm">
-          <.link navigate={~p"/users/log-in"} class="px-2 py-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700">Inbox</.link>
-          <.link navigate={~p"/users/register"} class="px-2 py-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700">Roadmap</.link>
-          <a class="px-2 py-2 rounded text-muted">Issues</a>
-          <a class="px-2 py-2 rounded text-muted">Boards</a>
-        </nav>
-      </aside>
-
-      <!-- Main board area -->
-      <main class="col-start-2">
-        <header class="mb-6 flex items-center justify-between">
-          <div class="flex items-center gap-4">
-            <h2 class="text-2xl font-semibold">Workspace</h2>
-            <div class="text-sm text-muted">Demo workspace</div>
-          </div>
-          <div class="flex items-center gap-3">
-            <.link navigate={~p"/users/register"} class="btn btn-ghost">New</.link>
-            <.link navigate={~p"/users/log-in"} class="btn btn-outline">Log in</.link>
-          </div>
-        </header>
-
-        <section class="grid grid-cols-3 gap-4">
-          <div class="rounded-lg bg-white p-4 shadow-sm border border-gray-100">
-            <h3 class="text-sm font-semibold mb-3">Planned</h3>
-            <ul class="space-y-3">
-              <li class="rounded p-3 bg-slate-50 dark:bg-slate-800">Create initial seed</li>
-              <li class="rounded p-3 bg-slate-50 dark:bg-slate-800">Add login demo</li>
-            </ul>
-          </div>
-
-          <div class="rounded-lg bg-white p-4 shadow-sm border border-gray-100">
-            <h3 class="text-sm font-semibold mb-3">In Progress</h3>
-            <ul class="space-y-3">
-              <li class="rounded p-3 bg-slate-50 dark:bg-slate-800">UI polish</li>
-              <li class="rounded p-3 bg-slate-50 dark:bg-slate-800">Tests</li>
-            </ul>
-          </div>
-
-          <div class="rounded-lg bg-white p-4 shadow-sm border border-gray-100">
-            <h3 class="text-sm font-semibold mb-3">Done</h3>
-            <ul class="space-y-3">
-              <li class="rounded p-3 bg-slate-50 dark:bg-slate-800">Prototype pages</li>
-            </ul>
-          </div>
-        </section>
-      </main>
-
-      <!-- Right rail -->
-      <aside class="col-start-3 rounded-lg bg-white/60 dark:bg-slate-800/60 p-4 shadow-sm border border-gray-100 dark:border-slate-700">
-        <div class="text-sm font-semibold">Details</div>
-        <div class="mt-3 text-sm text-muted">Select an item to see details.</div>
-      </aside>
+    <div class="space-x-4">
+      <.link navigate={~p"/users/log-in"} class="btn btn-primary">Log in</.link>
+      <.link navigate={~p"/users/register"} class="btn btn-primary">Register</.link>
     </div>
   </div>
 </div>

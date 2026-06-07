@@ -93,3 +93,55 @@ Plotline will use Phoenix's built-in auth generator (`phx.gen.auth`) for login a
 - Do we need progress history (not just current chapter) in MVP?
 - Should progress updates be manual only, or support page/percent-to-chapter mapping?
 
+## Extraction Adapter Architecture Decision — 06/06/2026
+
+Plotline will use one Elixir adapter module per external summary website. Each adapter implements `Plotline.Extraction.Adapter` and is responsible only for fetching and normalizing summary text from that source. A shared orchestrator (`Plotline.Extraction`) handles book lookup, adapter selection, and storage via `Summaries.upsert_summary/1`.
+
+#### Key Decisions
+
+- One adapter per website (e.g. `ChapterSummaries`, `Sparknotes`, `JsonFile`)
+- Adapters registered in a single map in `Plotline.Extraction` (keyed by string, e.g. `"chaptersummaries"`)
+- All adapters return the same normalized attrs: `summary_text`, `source_url`, `scraped_at`
+- `source_name` stored in DB for provenance (unique per book + chapter + source)
+- Shared HTTP helpers live in `Adapters.Http` (Req); site-specific parsing stays in each adapter
+- Import all chapters once on book add — not on each progress update
+- Spoiler safety remains at read time (`get_summaries_up_to/2`), not at import time
+
+#### Immediate Action Items
+
+- ✅ Implement `ChapterSummaries` adapter (primary MVP source)
+- ✅ Implement `JsonFile` adapter for offline demo/tests
+- Add UI hook: `Books.add_book_with_summaries!/1` when user adds a book
+- Add additional adapters only if chapter-summaries.com lacks a needed title
+
+#### Open Items
+
+- Should we refresh stored summaries on a schedule or only on manual re-import?
+- Which secondary adapters are worth building after MVP (SparkNotes, etc.)?
+
+## Chapter Summaries Catalog Decision — 06/06/2026
+
+chapter-summaries.com is the primary summary source for MVP (~97 books). Before importing summaries, the app must know whether a requested title exists on that site. A local catalog syncs the site's browse index to disk and supports fast title/author lookup without scraping at request time.
+
+#### Key Decisions
+
+- Primary summary source: **chapter-summaries.com** (rich per-chapter summaries on one page per book)
+- Catalog module: `Plotline.Extraction.Adapters.ChapterSummaries.Catalog`
+- Sync full book list via `mix plotline.sync_catalog` → `priv/data/chapter_summaries_catalog.json`
+- Match books by normalized **title + author** (Hardcover metadata feeds into this lookup)
+- Store matched slug on `books.chapter_summaries_slug` after first successful import
+- If not in catalog → return `{:error, :not_in_catalog}`; do not attempt live scrape
+- Hardcover = metadata/discovery; chapter-summaries.com catalog = summary availability truth
+
+#### Immediate Action Items
+
+- ✅ Catalog sync task and JSON cache
+- ✅ `Books.chapter_summaries_available?/2` and `Books.lookup_chapter_summaries/2`
+- Wire catalog check into add-book LiveView (when built)
+- Re-run `mix plotline.sync_catalog` periodically as site adds books
+
+#### Open Items
+
+- How fuzzy should title/author matching be when Hardcover spelling differs slightly?
+- Should the browse UI show only catalog-backed books, or all Hardcover results with an availability badge?
+
