@@ -11,27 +11,6 @@
 
 ## Section 3: Overview of the Product
 
-### Workflow
-
-The primary user workflow maps directly to must-have requirements:
-
-```mermaid
-flowchart TD
-    A[Visit Plotline] --> B{Logged in?}
-    B -->|No| C[Register / Log in — MH-1, MH-2]
-    B -->|Yes| D[Open Reading Library — MH-7]
-    D --> E[Add Book]
-    E --> F{In chapter-summaries.com catalog?}
-    F -->|No| G[Show not available message — MH-4]
-    F -->|Yes| H[Import all chapter summaries — MH-3]
-    H --> I[Book appears in library — MH-7]
-    I --> J[Set current chapter — MH-5]
-    J --> K[View spoiler-safe recall — MH-6]
-    K --> L{Stretch: Generate AI recap? — ST-1}
-    L -->|Yes| M[Display narrative recap]
-    L -->|No| N[Done]
-```
-
 | Workflow Step | Requirements |
 |---|---|
 | Account creation | MH-1 |
