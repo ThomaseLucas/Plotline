@@ -271,15 +271,3 @@ Plotline uses a browser-based responsive web interface built with Phoenix LiveVi
 - [PHOENIX_GUIDE.md](PHOENIX_GUIDE.md) — Phoenix structure and schema guide
 
 ---
-
-## Grading Alignment Notes
-
-| Grade | Criteria | Plotline Plan |
-|---|---|---|
-| **A (94+)** | All 7 must-haves + ≥ half of 4 stretch (≥ 2 stretch) | Complete MH-1 through MH-7; implement ST-1 and ST-2 (or ST-4) |
-| **B** | All must-haves complete | MH-1 through MH-7 fully demonstrable at grading meeting |
-| **C** | Some must-haves incomplete | Avoid — prioritize MH-6 (spoiler filter) and MH-3 (import) as core differentiators |
-
-**Current status (Week 7):** Backend for MH-3, MH-4, and MH-6 query logic is implemented. MH-1 and MH-2 are implemented via phx.gen.auth. MH-5 has context/tests but no UI. MH-7 and recall UI are the primary remaining must-have work.
-
----
