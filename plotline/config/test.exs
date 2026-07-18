@@ -48,6 +48,30 @@ config :plotline, PlotlineWeb.Endpoint,
 # In test we don't send emails
 config :plotline, Plotline.Mailer, adapter: Swoosh.Adapters.Test
 
+config :plotline, Plotline.CatalogSync, cooldown_ms: 0
+
+config :plotline, Plotline.Extraction.Adapters.ChapterSummaries.Catalog,
+  catalog_path: "test/support/fixtures/chapter_summaries/catalog.json"
+
+config :plotline, Plotline.AI,
+  api_key: "test-key",
+  provider: Plotline.AI.TestProvider,
+  request_retries: 0,
+  retry_base_ms: 0
+
+config :plotline, Plotline.Hardcover,
+  api_token: "test-hardcover-token",
+  client: Plotline.Hardcover.TestClient
+
+config :plotline, Plotline.PdfUploads,
+  upload_dir: "tmp/test_uploads/pdfs"
+
+config :plotline, Plotline.PdfUploads.Processor,
+  text_extractor: Plotline.Pdf.TextExtractor.TestExtractor,
+  async: false,
+  chapter_pause_ms: 0,
+  batch_size: 4
+
 # Disable swoosh api client as it is only required for production adapters
 config :swoosh, :api_client, false
 

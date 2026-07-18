@@ -63,11 +63,13 @@ defmodule Plotline.Accounts do
   ## User registration
 
   @doc """
-  Registers a user.
+  Registers a user with email and password.
+
+  The account is confirmed immediately (no email verification).
 
   ## Examples
 
-      iex> register_user(%{field: value})
+      iex> register_user(%{email: "...", password: "..."})
       {:ok, %User{}}
 
       iex> register_user(%{field: bad_value})
@@ -76,8 +78,15 @@ defmodule Plotline.Accounts do
   """
   def register_user(attrs) do
     %User{}
-    |> User.email_changeset(attrs)
+    |> User.registration_changeset(attrs)
     |> Repo.insert()
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking user registration changes.
+  """
+  def change_user_registration(user, attrs \\ %{}, opts \\ []) do
+    User.registration_changeset(user, attrs, Keyword.put_new(opts, :hash_password, false))
   end
 
   ## Settings

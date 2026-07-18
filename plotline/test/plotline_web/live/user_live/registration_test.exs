@@ -10,6 +10,7 @@ defmodule PlotlineWeb.UserLive.RegistrationTest do
 
       assert html =~ "Register"
       assert html =~ "Log in"
+      assert html =~ "Password"
     end
 
     test "redirects if already logged in", %{conn: conn} do
@@ -17,7 +18,7 @@ defmodule PlotlineWeb.UserLive.RegistrationTest do
         conn
         |> log_in_user(user_fixture())
         |> live(~p"/users/register")
-        |> follow_redirect(conn, ~p"/")
+        |> follow_redirect(conn, ~p"/library")
 
       assert {:ok, _conn} = result
     end
@@ -28,7 +29,7 @@ defmodule PlotlineWeb.UserLive.RegistrationTest do
       result =
         lv
         |> element("#registration_form")
-        |> render_change(user: %{"email" => "with spaces"})
+        |> render_change(user: %{"email" => "with spaces", "password" => "short"})
 
       assert result =~ "Register"
       assert result =~ "must have the @ sign and no spaces"
@@ -36,18 +37,17 @@ defmodule PlotlineWeb.UserLive.RegistrationTest do
   end
 
   describe "register user" do
-    test "creates account but does not log in", %{conn: conn} do
+    test "creates account and logs in", %{conn: conn} do
       {:ok, lv, _html} = live(conn, ~p"/users/register")
 
       email = unique_user_email()
       form = form(lv, "#registration_form", user: valid_user_attributes(email: email))
 
-      {:ok, _lv, html} =
-        render_submit(form)
-        |> follow_redirect(conn, ~p"/users/log-in")
+      render_submit(form)
+      conn = follow_trigger_action(form, conn)
 
-      assert html =~
-               ~r/An email was sent to .*, please access it to confirm your account/
+      assert redirected_to(conn) == ~p"/library"
+      assert get_session(conn, :user_token)
     end
 
     test "renders errors for duplicated email", %{conn: conn} do
@@ -58,7 +58,7 @@ defmodule PlotlineWeb.UserLive.RegistrationTest do
       result =
         lv
         |> form("#registration_form",
-          user: %{"email" => user.email}
+          user: %{"email" => user.email, "password" => valid_user_password()}
         )
         |> render_submit()
 
@@ -72,7 +72,7 @@ defmodule PlotlineWeb.UserLive.RegistrationTest do
 
       {:ok, _login_live, login_html} =
         lv
-        |> element("main a", "Log in")
+        |> element("#registration-page a", "Log in")
         |> render_click()
         |> follow_redirect(conn, ~p"/users/log-in")
 

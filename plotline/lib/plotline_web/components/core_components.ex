@@ -214,7 +214,7 @@ defmodule PlotlineWeb.CoreComponents do
           disabled={@rest[:disabled]}
           form={@rest[:form]}
         />
-        <span class="label">
+        <span class="label mb-1 text-sm font-medium text-[#212121]">
           <input
             type="checkbox"
             id={@id}
@@ -235,7 +235,7 @@ defmodule PlotlineWeb.CoreComponents do
     ~H"""
     <div class="fieldset mb-2">
       <label>
-        <span :if={@label} class="label mb-1">{@label}</span>
+        <span :if={@label} class="mb-1 block text-sm font-medium text-[#212121]">{@label}</span>
         <select
           id={@id}
           name={@name}
@@ -256,7 +256,7 @@ defmodule PlotlineWeb.CoreComponents do
     ~H"""
     <div class="fieldset mb-2">
       <label>
-        <span :if={@label} class="label mb-1">{@label}</span>
+        <span :if={@label} class="mb-1 block text-sm font-medium text-[#212121]">{@label}</span>
         <textarea
           id={@id}
           name={@name}
@@ -277,7 +277,7 @@ defmodule PlotlineWeb.CoreComponents do
     ~H"""
     <div class="fieldset mb-2">
       <label>
-        <span :if={@label} class="label mb-1">{@label}</span>
+        <span :if={@label} class="mb-1 block text-sm font-medium text-[#212121]">{@label}</span>
         <input
           type={@type}
           name={@name}

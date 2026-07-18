@@ -10,10 +10,10 @@ defmodule Plotline.Application do
     children = [
       PlotlineWeb.Telemetry,
       Plotline.Repo,
+      Plotline.CatalogSync,
       {DNSCluster, query: Application.get_env(:plotline, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Plotline.PubSub},
-      # Start a worker by calling: Plotline.Worker.start_link(arg)
-      # {Plotline.Worker, arg},
+      {Task.Supervisor, name: Plotline.TaskSupervisor},
       # Start to serve requests, typically the last entry
       PlotlineWeb.Endpoint
     ]

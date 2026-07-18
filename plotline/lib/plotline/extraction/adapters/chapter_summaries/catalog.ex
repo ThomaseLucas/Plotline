@@ -10,7 +10,7 @@ defmodule Plotline.Extraction.Adapters.ChapterSummaries.Catalog do
   alias Plotline.Extraction.Adapters.Http
 
   @base_url "https://chapter-summaries.com"
-  @catalog_path "priv/data/chapter_summaries_catalog.json"
+  @default_catalog_path "priv/data/chapter_summaries_catalog.json"
   @cache_key {:plotline, :chapter_summaries_catalog}
   @ttl_ms :timer.hours(24)
 
@@ -19,7 +19,8 @@ defmodule Plotline.Extraction.Adapters.ChapterSummaries.Catalog do
           title: String.t(),
           author: String.t(),
           total_chapters: pos_integer(),
-          url: String.t()
+          url: String.t(),
+          cover_image_url: String.t()
         }
 
   @doc "Returns all known books, using memory cache then disk then network."
@@ -33,7 +34,7 @@ defmodule Plotline.Extraction.Adapters.ChapterSummaries.Catalog do
       cached = get_memory_cache() ->
         cached
 
-      File.exists?(@catalog_path) ->
+      File.exists?(catalog_path()) ->
         load_disk!()
         get_memory_cache()
 
@@ -78,7 +79,7 @@ defmodule Plotline.Extraction.Adapters.ChapterSummaries.Catalog do
   @doc "Loads catalog from disk into the memory cache."
   def load_disk! do
     books =
-      @catalog_path
+      catalog_path()
       |> File.read!()
       |> Jason.decode!()
       |> Enum.map(&atomize_entry/1)
@@ -108,8 +109,44 @@ defmodule Plotline.Extraction.Adapters.ChapterSummaries.Catalog do
     end
   end
 
+  @doc "Returns the cover image URL for a catalog entry."
+  def cover_image_url(%{cover_image_url: url}) when is_binary(url) and url != "" do
+    url
+  end
+
+  def cover_image_url(%{slug: slug}) when is_binary(slug) do
+    default_cover_url(slug)
+  end
+
   @doc false
   def parse_browse_page(html) do
+    card_entries = parse_browse_cards(html)
+
+    if card_entries != [] do
+      card_entries
+    else
+      parse_browse_page_legacy(html)
+    end
+  end
+
+  defp parse_browse_cards(html) do
+    Regex.scan(
+      ~r/href="\/books\/([a-z0-9-]+)\/" class="book-card-link">.*?src="([^"]+)".*?book-card-title"[^>]*>([^<]+)<\/h3>.*?book-card-author"[^>]*>([^<]+)<\/p>.*?book-card-chapters">(\d+) chapters/s,
+      html
+    )
+    |> Enum.map(fn [_, slug, cover_path, title, author, chapters] ->
+      %{
+        slug: slug,
+        title: decode_entities(title),
+        author: decode_entities(author),
+        total_chapters: String.to_integer(chapters),
+        url: "#{@base_url}/books/#{slug}/",
+        cover_image_url: absolute_url(cover_path)
+      }
+    end)
+  end
+
+  defp parse_browse_page_legacy(html) do
     slugs =
       Regex.scan(~r/href="\/books\/([a-z0-9-]+)\/"/, html)
       |> Enum.map(fn [_, slug] -> slug end)
@@ -136,7 +173,8 @@ defmodule Plotline.Extraction.Adapters.ChapterSummaries.Catalog do
           title: title,
           author: author,
           total_chapters: total_chapters,
-          url: "#{@base_url}/books/#{slug}/"
+          url: "#{@base_url}/books/#{slug}/",
+          cover_image_url: default_cover_url(slug)
         }
       end)
     else
@@ -151,8 +189,14 @@ defmodule Plotline.Extraction.Adapters.ChapterSummaries.Catalog do
   end
 
   defp write_disk!(books) do
-    File.mkdir_p!(Path.dirname(@catalog_path))
-    File.write!(@catalog_path, Jason.encode!(books, pretty: true))
+    path = catalog_path()
+    File.mkdir_p!(Path.dirname(path))
+    File.write!(path, Jason.encode!(books, pretty: true))
+  end
+
+  defp catalog_path do
+    Application.get_env(:plotline, __MODULE__, [])
+    |> Keyword.get(:catalog_path, @default_catalog_path)
   end
 
   defp get_memory_cache do
@@ -171,14 +215,24 @@ defmodule Plotline.Extraction.Adapters.ChapterSummaries.Catalog do
   end
 
   defp atomize_entry(map) do
+    slug = map["slug"]
+
     %{
-      slug: map["slug"],
+      slug: slug,
       title: map["title"],
       author: map["author"],
       total_chapters: map["total_chapters"],
-      url: map["url"]
+      url: map["url"],
+      cover_image_url: map["cover_image_url"] || default_cover_url(slug)
     }
   end
+
+  defp default_cover_url(slug) do
+    "#{@base_url}/static/images/covers/#{slug}.webp"
+  end
+
+  defp absolute_url("/" <> _ = path), do: @base_url <> path
+  defp absolute_url("http" <> _ = url), do: url
 
   defp normalize(text) do
     text

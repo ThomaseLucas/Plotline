@@ -107,21 +107,86 @@ defmodule Plotline.Extraction.Adapters.ChapterSummaries do
   end
 
   defp extract_section_text(content) do
-    summary = extract_block(content, "summary-text")
-    events = extract_block(content, "key-events")
+    summary = extract_paragraphs(content, "summary-text")
+    events = extract_list_items(content, "key-events")
+    characters = extract_list_items(content, "characters-introduced")
+    themes = extract_list_items(content, "chapter-themes")
 
-    [summary, events]
+    [
+      summary,
+      section_block("Key Events", events),
+      section_block("Characters Introduced", characters),
+      section_block("Themes", themes)
+    ]
     |> Enum.reject(&(&1 == ""))
     |> Enum.join("\n\n")
+    |> String.trim()
   end
 
-  defp extract_block(content, class_name) do
+  defp section_block(_title, []), do: ""
+
+  defp section_block(title, items) do
+    bullets = Enum.map_join(items, "\n", &"- #{&1}")
+    "## #{title}\n#{bullets}"
+  end
+
+  defp extract_paragraphs(content, class_name) do
+    case extract_inner_html(content, class_name) do
+      "" ->
+        ""
+
+      inner ->
+        Regex.scan(~r/<p[^>]*>(.*?)<\/p>/s, inner, capture: :all_but_first)
+        |> Enum.map(fn [p] -> clean_text(p) end)
+        |> Enum.reject(&(&1 == ""))
+        |> case do
+          [] -> clean_text(inner)
+          paragraphs -> Enum.join(paragraphs, "\n\n")
+        end
+    end
+  end
+
+  defp extract_list_items(content, class_name) do
+    case extract_inner_html(content, class_name) do
+      "" ->
+        []
+
+      inner ->
+        Regex.scan(~r/<li[^>]*>(.*?)<\/li>/s, inner, capture: :all_but_first)
+        |> Enum.map(fn [item] -> clean_text(item) end)
+        |> Enum.reject(&(&1 == ""))
+    end
+  end
+
+  defp extract_inner_html(content, class_name) do
+    # Match the opening div for this class, then take until the matching depth
+    # closes. Nested lists don't use nested divs on chapter-summaries.com, so a
+    # non-greedy div match is enough.
     case Regex.run(~r/<div class="#{class_name}"[^>]*>(.*?)<\/div>/s, content,
            capture: :all_but_first
          ) do
-      [inner] -> inner |> Http.strip_html() |> String.trim()
+      [inner] -> inner
       _ -> ""
     end
+  end
+
+  defp clean_text(html) when is_binary(html) do
+    html
+    |> Http.strip_html()
+    |> decode_entities()
+    |> String.replace(~r/^[^A-Za-z0-9"']+/, "")
+    |> String.trim()
+  end
+
+  defp decode_entities(text) do
+    text
+    |> String.replace("&#39;", "'")
+    |> String.replace("&apos;", "'")
+    |> String.replace("&quot;", "\"")
+    |> String.replace("&amp;", "&")
+    |> String.replace("&lt;", "<")
+    |> String.replace("&gt;", ">")
+    |> String.replace("&nbsp;", " ")
   end
 
   defp chapters_url(slug), do: "#{@base_url}/books/#{slug}/chapters/"

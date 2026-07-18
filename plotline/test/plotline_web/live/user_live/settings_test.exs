@@ -31,9 +31,10 @@ defmodule PlotlineWeb.UserLive.SettingsTest do
           token_authenticated_at: DateTime.add(DateTime.utc_now(:second), -11, :minute)
         )
         |> live(~p"/users/settings")
-        |> follow_redirect(conn, ~p"/users/log-in")
+        |> follow_redirect(conn, ~p"/users/log-in?#{%{return_to: "/users/settings"}}")
 
-      assert conn.resp_body =~ "You must re-authenticate to access this page."
+      assert conn.resp_body =~ "Please confirm"
+      assert conn.resp_body =~ "Settings"
     end
   end
 
@@ -131,13 +132,13 @@ defmodule PlotlineWeb.UserLive.SettingsTest do
         |> element("#password_form")
         |> render_change(%{
           "user" => %{
-            "password" => "too short",
+            "password" => "short",
             "password_confirmation" => "does not match"
           }
         })
 
       assert result =~ "Save Password"
-      assert result =~ "should be at least 12 character(s)"
+      assert result =~ "should be at least 8 character(s)"
       assert result =~ "does not match password"
     end
 
@@ -148,14 +149,14 @@ defmodule PlotlineWeb.UserLive.SettingsTest do
         lv
         |> form("#password_form", %{
           "user" => %{
-            "password" => "too short",
+            "password" => "short",
             "password_confirmation" => "does not match"
           }
         })
         |> render_submit()
 
       assert result =~ "Save Password"
-      assert result =~ "should be at least 12 character(s)"
+      assert result =~ "should be at least 8 character(s)"
       assert result =~ "does not match password"
     end
   end

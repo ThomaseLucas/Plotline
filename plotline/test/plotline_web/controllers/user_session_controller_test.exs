@@ -18,10 +18,10 @@ defmodule PlotlineWeb.UserSessionControllerTest do
         })
 
       assert get_session(conn, :user_token)
-      assert redirected_to(conn) == ~p"/"
+      assert redirected_to(conn) == ~p"/library"
 
       # Now do a logged in request and assert on the menu
-      conn = get(conn, ~p"/")
+      conn = get(conn, ~p"/library")
       response = html_response(conn, 200)
       assert response =~ user.email
       assert response =~ ~p"/users/settings"
@@ -41,7 +41,7 @@ defmodule PlotlineWeb.UserSessionControllerTest do
         })
 
       assert conn.resp_cookies["_plotline_web_user_remember_me"]
-      assert redirected_to(conn) == ~p"/"
+      assert redirected_to(conn) == ~p"/library"
     end
 
     test "logs the user in with return to", %{conn: conn, user: user} do
@@ -70,6 +70,38 @@ defmodule PlotlineWeb.UserSessionControllerTest do
       assert Phoenix.Flash.get(conn.assigns.flash, :error) == "Invalid email or password"
       assert redirected_to(conn) == ~p"/users/log-in"
     end
+
+    test "redirects to landing page with invalid credentials when return_to is /", %{
+      conn: conn,
+      user: user
+    } do
+      user = set_password(user)
+
+      conn =
+        post(conn, ~p"/users/log-in", %{
+          "return_to" => "/",
+          "user" => %{"email" => user.email, "password" => "invalid_password"}
+        })
+
+      assert Phoenix.Flash.get(conn.assigns.flash, :error) == "Invalid email or password"
+      assert redirected_to(conn) == ~p"/"
+    end
+
+    test "sends magic link instructions and returns to landing when password is blank", %{
+      conn: conn,
+      user: user
+    } do
+      conn =
+        post(conn, ~p"/users/log-in", %{
+          "return_to" => "/",
+          "user" => %{"email" => user.email, "password" => ""}
+        })
+
+      assert redirected_to(conn) == ~p"/"
+
+      assert Phoenix.Flash.get(conn.assigns.flash, :info) =~
+               "If your email is in our system, you will receive instructions for logging in shortly."
+    end
   end
 
   describe "POST /users/log-in - magic link" do
@@ -82,10 +114,10 @@ defmodule PlotlineWeb.UserSessionControllerTest do
         })
 
       assert get_session(conn, :user_token)
-      assert redirected_to(conn) == ~p"/"
+      assert redirected_to(conn) == ~p"/library"
 
       # Now do a logged in request and assert on the menu
-      conn = get(conn, ~p"/")
+      conn = get(conn, ~p"/library")
       response = html_response(conn, 200)
       assert response =~ user.email
       assert response =~ ~p"/users/settings"
@@ -103,13 +135,13 @@ defmodule PlotlineWeb.UserSessionControllerTest do
         })
 
       assert get_session(conn, :user_token)
-      assert redirected_to(conn) == ~p"/"
+      assert redirected_to(conn) == ~p"/library"
       assert Phoenix.Flash.get(conn.assigns.flash, :info) =~ "User confirmed successfully."
 
       assert Accounts.get_user!(user.id).confirmed_at
 
       # Now do a logged in request and assert on the menu
-      conn = get(conn, ~p"/")
+      conn = get(conn, ~p"/library")
       response = html_response(conn, 200)
       assert response =~ user.email
       assert response =~ ~p"/users/settings"

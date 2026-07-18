@@ -32,6 +32,26 @@ const liveSocket = new LiveSocket("/live", Socket, {
   hooks: {...colocatedHooks},
 })
 
+// Custom number steppers (replaces native ugly spin buttons)
+window.addEventListener("plotline:step-number", (event) => {
+  const input = event.target
+  if (!(input instanceof HTMLInputElement) || input.type !== "number") return
+
+  const delta = Number(event.detail?.delta || 0)
+  if (!Number.isFinite(delta) || delta === 0) return
+
+  const min = input.min === "" ? null : Number(input.min)
+  const max = input.max === "" ? null : Number(input.max)
+  let next = Number(input.value || 0) + delta
+
+  if (min !== null && Number.isFinite(min)) next = Math.max(min, next)
+  if (max !== null && Number.isFinite(max)) next = Math.min(max, next)
+
+  input.value = String(next)
+  input.dispatchEvent(new Event("input", {bubbles: true}))
+  input.dispatchEvent(new Event("change", {bubbles: true}))
+})
+
 // Show progress bar on live navigation and form submits
 topbar.config({barColors: {0: "#29d"}, shadowColor: "rgba(0, 0, 0, .3)"})
 window.addEventListener("phx:page-loading-start", _info => topbar.show(300))

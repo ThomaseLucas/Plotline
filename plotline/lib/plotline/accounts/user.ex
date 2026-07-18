@@ -13,6 +13,19 @@ defmodule Plotline.Accounts.User do
   end
 
   @doc """
+  A user changeset for registering with email and password.
+
+  Confirms the account immediately (no email verification).
+  """
+  def registration_changeset(user, attrs, opts \\ []) do
+    user
+    |> cast(attrs, [:email, :password])
+    |> validate_email(opts)
+    |> validate_password(opts)
+    |> put_change(:confirmed_at, DateTime.utc_now(:second))
+  end
+
+  @doc """
   A user changeset for registering or changing the email.
 
   It requires the email to change otherwise an error is added.
@@ -81,7 +94,7 @@ defmodule Plotline.Accounts.User do
   defp validate_password(changeset, opts) do
     changeset
     |> validate_required([:password])
-    |> validate_length(:password, min: 12, max: 72)
+    |> validate_length(:password, min: 8, max: 72)
     # Examples of additional password validation:
     # |> validate_format(:password, ~r/[a-z]/, message: "at least one lower case character")
     # |> validate_format(:password, ~r/[A-Z]/, message: "at least one upper case character")

@@ -118,3 +118,11 @@ if config_env() == :prod do
   #
   # See https://hexdocs.pm/swoosh/Swoosh.html#module-installation for details.
 end
+
+if api_key = System.get_env("GEMINI_API_KEY") do
+  config :plotline, Plotline.AI, api_key: api_key
+end
+
+if token = System.get_env("HARDCOVER_API_TOKEN") do
+  config :plotline, Plotline.Hardcover, api_token: token
+end

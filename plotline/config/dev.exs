@@ -21,6 +21,12 @@ if File.exists?(env_file) do
   end)
 end
 
+config :plotline, Plotline.AI,
+  api_key: System.get_env("GEMINI_API_KEY")
+
+config :plotline, Plotline.Hardcover,
+  api_token: System.get_env("HARDCOVER_API_TOKEN")
+
 # Configure your database
 config :plotline, Plotline.Repo,
   username: System.get_env("PGUSER") || "postgres",

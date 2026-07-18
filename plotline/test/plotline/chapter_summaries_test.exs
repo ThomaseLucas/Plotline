@@ -7,10 +7,10 @@ defmodule Plotline.ChapterSummariesTest do
 
   @browse_fixture "test/support/fixtures/chapter_summaries/browse_page.html"
   @chapters_fixture "test/support/fixtures/chapter_summaries/chapters_page.html"
-  @catalog_fixture "test/support/fixtures/chapter_summaries/catalog.json"
 
   setup do
     Catalog.clear_cache!()
+    Catalog.load_disk!()
     :ok
   end
 
@@ -23,6 +23,9 @@ defmodule Plotline.ChapterSummariesTest do
     assert first.title == "Pride and Prejudice"
     assert first.author == "Jane Austen"
     assert first.total_chapters == 61
+
+    assert first.cover_image_url ==
+             "https://chapter-summaries.com/static/images/covers/pride-and-prejudice.webp"
   end
 
   test "parse_chapters_page/1 extracts numbered chapter summaries" do
@@ -31,15 +34,15 @@ defmodule Plotline.ChapterSummariesTest do
     assert {:ok, chapters} = ChapterSummaries.parse_chapters_page(html)
     assert map_size(chapters) == 2
     assert chapters[1] =~ "universally acknowledged"
-    assert chapters[1] =~ "Key Events"
-    assert chapters[1] =~ "Netherfield Park"
+    assert chapters[1] =~ "## Key Events"
+    assert chapters[1] =~ "- Mr. Bingley arrives at Netherfield Park"
+    assert chapters[1] =~ "## Characters Introduced"
+    assert chapters[1] =~ "- Mr. Bingley"
     assert chapters[2] =~ "Mr. Bennet visits"
+    refute chapters[2] =~ "## Key Events"
   end
 
   test "find_book/2 matches title and author from cached catalog" do
-    copy_catalog_fixture!()
-    Catalog.load_disk!()
-
     assert %{slug: "pride-and-prejudice"} =
              Catalog.find_book("Pride and Prejudice", "Jane Austen")
 
@@ -47,9 +50,6 @@ defmodule Plotline.ChapterSummariesTest do
   end
 
   test "chapter_summaries_available?/2 reflects catalog membership" do
-    copy_catalog_fixture!()
-    Catalog.load_disk!()
-
     assert Books.chapter_summaries_available?("1984", "George Orwell")
     refute Books.chapter_summaries_available?("Dune", "Frank Herbert")
   end
@@ -65,9 +65,6 @@ defmodule Plotline.ChapterSummariesTest do
   end
 
   test "add_book_with_summaries!/1 returns not_in_catalog for unknown books" do
-    copy_catalog_fixture!()
-    Catalog.load_disk!()
-
     assert {:error, :not_in_catalog} =
              Books.add_book_with_summaries!(%{title: "Dune", author: "Frank Herbert"})
   end
@@ -88,11 +85,5 @@ defmodule Plotline.ChapterSummariesTest do
 
     summaries = Plotline.Summaries.get_summaries_up_to(book.id, 2)
     assert length(summaries) == 2
-  end
-
-  defp copy_catalog_fixture! do
-    dest = "priv/data/chapter_summaries_catalog.json"
-    File.mkdir_p!(Path.dirname(dest))
-    File.cp!(@catalog_fixture, dest)
   end
 end

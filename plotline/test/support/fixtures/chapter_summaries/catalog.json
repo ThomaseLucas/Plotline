@@ -4,13 +4,15 @@
     "title": "Pride and Prejudice",
     "author": "Jane Austen",
     "total_chapters": 61,
-    "url": "https://chapter-summaries.com/books/pride-and-prejudice/"
+    "url": "https://chapter-summaries.com/books/pride-and-prejudice/",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/pride-and-prejudice.webp"
   },
   {
     "slug": "1984",
     "title": "1984",
     "author": "George Orwell",
     "total_chapters": 24,
-    "url": "https://chapter-summaries.com/books/1984/"
+    "url": "https://chapter-summaries.com/books/1984/",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/1984.webp"
   }
 ]

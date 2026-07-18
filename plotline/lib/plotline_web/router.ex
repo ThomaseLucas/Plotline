@@ -13,6 +13,11 @@ defmodule PlotlineWeb.Router do
     plug :fetch_current_scope_for_user
   end
 
+  pipeline :auth_pages do
+    plug :hide_nav
+    plug :store_return_to
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -52,6 +57,11 @@ defmodule PlotlineWeb.Router do
 
     live_session :require_authenticated_user,
       on_mount: [{PlotlineWeb.UserAuth, :require_authenticated}] do
+      live "/library", LibraryLive.Index, :index
+      live "/library/new", LibraryLive.New, :new
+      live "/library/upload", LibraryLive.Upload, :new
+      live "/library/:id", LibraryLive.Show, :show
+
       live "/users/settings", UserLive.Settings, :edit
       live "/users/settings/confirm-email/:token", UserLive.Settings, :confirm_email
     end
@@ -60,7 +70,7 @@ defmodule PlotlineWeb.Router do
   end
 
   scope "/", PlotlineWeb do
-    pipe_through [:browser]
+    pipe_through [:browser, :auth_pages]
 
     live_session :current_user,
       on_mount: [{PlotlineWeb.UserAuth, :mount_current_scope}] do

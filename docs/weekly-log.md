@@ -21,9 +21,12 @@ Short weekly notes on progress, blockers, and next steps. Same structure each we
   - ✅ `Books.add_book_with_summaries!/1` — import all chapters on book add
   - ✅ Live test: *The Strength of the Few* — 80/80 chapters imported
   - ✅ Mix tasks: `plotline.sync_catalog`, `plotline.extract`
-  - ✅ All tests passing (131)
-- What I am stuck on: Nothing major — need to build the add-book UI next
-- Next task: Add-book LiveView — catalog check, import on add, create `user_book` with starting chapter
+  - ✅ **Library LiveViews** — `/library`, `/library/new`, `/library/:id`
+  - ✅ Add book flow — catalog search, import, create `user_book`
+  - ✅ Book detail — update chapter, spoiler-safe recall display
+  - ✅ All tests passing (138)
+- What I am stuck on: Nothing major
+- Next task: AI recap (stretch), polish UI, demo rehearsal
 - Important decisions made:
   - chapter-summaries.com as primary summary source for MVP
   - Import summaries once on book add (not on each chapter update)

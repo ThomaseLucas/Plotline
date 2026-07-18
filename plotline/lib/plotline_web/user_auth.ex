@@ -238,8 +238,8 @@ defmodule PlotlineWeb.UserAuth do
     else
       socket =
         socket
-        |> Phoenix.LiveView.put_flash(:error, "You must re-authenticate to access this page.")
-        |> Phoenix.LiveView.redirect(to: ~p"/users/log-in")
+        |> Phoenix.LiveView.put_flash(:error, "Please confirm it's you to open Settings.")
+        |> Phoenix.LiveView.redirect(to: ~p"/users/log-in?#{%{return_to: "/users/settings"}}")
 
       {:halt, socket}
     end
@@ -258,7 +258,7 @@ defmodule PlotlineWeb.UserAuth do
 
   @doc "Returns the path to redirect to after log in."
   # After sign in redirect to the home page for the demo/prototype
-  def signed_in_path(_), do: ~p"/"
+  def signed_in_path(_), do: ~p"/library"
 
   @doc """
   Plug for routes that require the user to be authenticated.
@@ -280,4 +280,33 @@ defmodule PlotlineWeb.UserAuth do
   end
 
   defp maybe_store_return_to(conn), do: conn
+
+  @doc """
+  Hides the site header on auth pages so they can use full-bleed layouts.
+  """
+  def hide_nav(conn, _opts), do: assign(conn, :hide_nav, true)
+
+  @doc """
+  Stores a safe `return_to` path from the query string in the session.
+  """
+  def store_return_to(conn, _opts) do
+    case conn.params["return_to"] do
+      "/" <> _ = path ->
+        if valid_return_to?(path) do
+          put_session(conn, :user_return_to, path)
+        else
+          conn
+        end
+
+      _ ->
+        conn
+    end
+  end
+
+  @doc false
+  def valid_return_to_path?(path), do: valid_return_to?(path)
+
+  defp valid_return_to?(path) when is_binary(path) do
+    String.starts_with?(path, "/") and not String.starts_with?(path, "//")
+  end
 end

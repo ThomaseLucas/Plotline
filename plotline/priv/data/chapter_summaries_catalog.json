@@ -3,679 +3,880 @@
     "title": "The Strength of the Few",
     "author": "James Islington",
     "url": "https://chapter-summaries.com/books/the-strength-of-the-few/",
+    "total_chapters": 80,
     "slug": "the-strength-of-the-few",
-    "total_chapters": 80
-  },
-  {
-    "title": "Wuthering Heights",
-    "author": "Emily Brontë",
-    "url": "https://chapter-summaries.com/books/wuthering-heights/",
-    "slug": "wuthering-heights",
-    "total_chapters": 34
-  },
-  {
-    "title": "The Count of Monte Cristo",
-    "author": "Alexandre Dumas",
-    "url": "https://chapter-summaries.com/books/the-count-of-monte-cristo/",
-    "slug": "the-count-of-monte-cristo",
-    "total_chapters": 117
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-strength-of-the-few.webp"
   },
   {
     "title": "There Is No Antimemetics Division: A Novel",
     "author": "qntm",
     "url": "https://chapter-summaries.com/books/there-is-no-antimemetics-division/",
+    "total_chapters": 18,
     "slug": "there-is-no-antimemetics-division",
-    "total_chapters": 18
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/there-is-no-antimemetics-division.webp"
+  },
+  {
+    "title": "The Count of Monte Cristo",
+    "author": "Alexandre Dumas",
+    "url": "https://chapter-summaries.com/books/the-count-of-monte-cristo/",
+    "total_chapters": 117,
+    "slug": "the-count-of-monte-cristo",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-count-of-monte-cristo.webp"
   },
   {
     "title": "The Will of the Many",
     "author": "James Islington",
     "url": "https://chapter-summaries.com/books/the-will-of-the-many/",
+    "total_chapters": 76,
     "slug": "the-will-of-the-many",
-    "total_chapters": 76
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-will-of-the-many.webp"
+  },
+  {
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "url": "https://chapter-summaries.com/books/wuthering-heights/",
+    "total_chapters": 34,
+    "slug": "wuthering-heights",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/wuthering-heights.webp"
   },
   {
     "title": "Pride and Prejudice",
     "author": "Jane Austen",
     "url": "https://chapter-summaries.com/books/pride-and-prejudice/",
+    "total_chapters": 61,
     "slug": "pride-and-prejudice",
-    "total_chapters": 61
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/pride-and-prejudice.webp"
   },
   {
     "title": "The Handmaid's Tale",
     "author": "Margaret Atwood",
     "url": "https://chapter-summaries.com/books/the-handmaids-tale/",
+    "total_chapters": 46,
     "slug": "the-handmaids-tale",
-    "total_chapters": 46
-  },
-  {
-    "title": "Frankenstein",
-    "author": "Mary Shelley",
-    "url": "https://chapter-summaries.com/books/frankenstein/",
-    "slug": "frankenstein",
-    "total_chapters": 25
-  },
-  {
-    "title": "1984",
-    "author": "George Orwell",
-    "url": "https://chapter-summaries.com/books/1984/",
-    "slug": "1984",
-    "total_chapters": 24
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-handmaids-tale.webp"
   },
   {
     "title": "The Devils",
     "author": "Joe Abercrombie",
     "url": "https://chapter-summaries.com/books/the-devils/",
+    "total_chapters": 72,
     "slug": "the-devils",
-    "total_chapters": 72
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-devils.webp"
   },
   {
-    "title": "The Picture of Dorian Gray",
-    "author": "Oscar Wilde",
-    "url": "https://chapter-summaries.com/books/the-picture-of-dorian-gray/",
-    "slug": "the-picture-of-dorian-gray",
-    "total_chapters": 21
-  },
-  {
-    "title": "Animal Farm",
+    "title": "1984",
     "author": "George Orwell",
-    "url": "https://chapter-summaries.com/books/animal-farm/",
-    "slug": "animal-farm",
-    "total_chapters": 10
+    "url": "https://chapter-summaries.com/books/1984/",
+    "total_chapters": 24,
+    "slug": "1984",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/1984.webp"
   },
   {
-    "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald",
-    "url": "https://chapter-summaries.com/books/the-great-gatsby/",
-    "slug": "the-great-gatsby",
-    "total_chapters": 9
-  },
-  {
-    "title": "Brother",
-    "author": "Ania Ahlborn",
-    "url": "https://chapter-summaries.com/books/brother/",
-    "slug": "brother",
-    "total_chapters": 27
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "url": "https://chapter-summaries.com/books/frankenstein/",
+    "total_chapters": 25,
+    "slug": "frankenstein",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/frankenstein.webp"
   },
   {
     "title": "Where the Crawdads Sing",
     "author": "Delia Owens",
     "url": "https://chapter-summaries.com/books/where-the-crawdads-sing/",
+    "total_chapters": 59,
     "slug": "where-the-crawdads-sing",
-    "total_chapters": 59
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/where-the-crawdads-sing.webp"
+  },
+  {
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "url": "https://chapter-summaries.com/books/the-picture-of-dorian-gray/",
+    "total_chapters": 21,
+    "slug": "the-picture-of-dorian-gray",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-picture-of-dorian-gray.webp"
+  },
+  {
+    "title": "Animal Farm",
+    "author": "George Orwell",
+    "url": "https://chapter-summaries.com/books/animal-farm/",
+    "total_chapters": 10,
+    "slug": "animal-farm",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/animal-farm.webp"
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "url": "https://chapter-summaries.com/books/the-great-gatsby/",
+    "total_chapters": 9,
+    "slug": "the-great-gatsby",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-great-gatsby.webp"
+  },
+  {
+    "title": "Brother",
+    "author": "Ania Ahlborn",
+    "url": "https://chapter-summaries.com/books/brother/",
+    "total_chapters": 27,
+    "slug": "brother",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/brother.webp"
   },
   {
     "title": "Tender is the Flesh",
     "author": "Agustina Bazterrica",
     "url": "https://chapter-summaries.com/books/tender-is-the-flesh/",
+    "total_chapters": 43,
     "slug": "tender-is-the-flesh",
-    "total_chapters": 43
-  },
-  {
-    "title": "Onyx Storm",
-    "author": "Rebecca Yarros",
-    "url": "https://chapter-summaries.com/books/onyx-storm/",
-    "slug": "onyx-storm",
-    "total_chapters": 68
-  },
-  {
-    "title": "Sunrise on the Reaping",
-    "author": "Suzanne Collins",
-    "url": "https://chapter-summaries.com/books/sunrise-on-the-reaping/",
-    "slug": "sunrise-on-the-reaping",
-    "total_chapters": 28
-  },
-  {
-    "title": "The Scarlet Letter",
-    "author": "Nathaniel Hawthorne",
-    "url": "https://chapter-summaries.com/books/the-scarlet-letter/",
-    "slug": "the-scarlet-letter",
-    "total_chapters": 24
-  },
-  {
-    "title": "Kill for Me, Kill for You",
-    "author": "Steve Cavanagh",
-    "url": "https://chapter-summaries.com/books/kill-for-me-kill-for-you/",
-    "slug": "kill-for-me-kill-for-you",
-    "total_chapters": 64
-  },
-  {
-    "title": "Fahrenheit 451",
-    "author": "Ray Bradbury",
-    "url": "https://chapter-summaries.com/books/fahrenheit-451/",
-    "slug": "fahrenheit-451",
-    "total_chapters": 3
-  },
-  {
-    "title": "Famous: A Novel",
-    "author": "Blake Crouch",
-    "url": "https://chapter-summaries.com/books/famous/",
-    "slug": "famous",
-    "total_chapters": 26
-  },
-  {
-    "title": "Strangers in Time",
-    "author": "David Baldacci",
-    "url": "https://chapter-summaries.com/books/strangers-in-time/",
-    "slug": "strangers-in-time",
-    "total_chapters": 88
-  },
-  {
-    "title": "The Covenant of Water",
-    "author": "Abraham Verghese",
-    "url": "https://chapter-summaries.com/books/the-covenant-of-water/",
-    "slug": "the-covenant-of-water",
-    "total_chapters": 84
-  },
-  {
-    "title": "Tom's Crossing: A Novel",
-    "author": "Mark Z. Danielewski",
-    "url": "https://chapter-summaries.com/books/toms-crossing/",
-    "slug": "toms-crossing",
-    "total_chapters": 27
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/tender-is-the-flesh.webp"
   },
   {
     "title": "A Parade of Horribles",
     "author": "Matt Dinniman",
     "url": "https://chapter-summaries.com/books/a-parade-of-horribles/",
+    "total_chapters": 105,
     "slug": "a-parade-of-horribles",
-    "total_chapters": 105
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/a-parade-of-horribles.webp"
   },
   {
-    "title": "Horror Movie",
-    "author": "Paul Tremblay",
-    "url": "https://chapter-summaries.com/books/horror-movie/",
-    "slug": "horror-movie",
-    "total_chapters": 33
+    "title": "Sunrise on the Reaping",
+    "author": "Suzanne Collins",
+    "url": "https://chapter-summaries.com/books/sunrise-on-the-reaping/",
+    "total_chapters": 28,
+    "slug": "sunrise-on-the-reaping",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/sunrise-on-the-reaping.webp"
   },
   {
-    "title": "The City & the City: A Novel",
-    "author": "China Miéville",
-    "url": "https://chapter-summaries.com/books/the-city-and-the-city/",
-    "slug": "the-city-and-the-city",
-    "total_chapters": 29
-  },
-  {
-    "title": "A Calamity of Souls",
-    "author": "David Baldacci",
-    "url": "https://chapter-summaries.com/books/a-calamity-of-souls/",
-    "slug": "a-calamity-of-souls",
-    "total_chapters": 93
-  },
-  {
-    "title": "Summit Lake",
-    "author": "Charlie Donlea",
-    "url": "https://chapter-summaries.com/books/summit-lake/",
-    "slug": "summit-lake",
-    "total_chapters": 51
-  },
-  {
-    "title": "Hidden Nature",
-    "author": "Nora Roberts",
-    "url": "https://chapter-summaries.com/books/hidden-nature/",
-    "slug": "hidden-nature",
-    "total_chapters": 31
-  },
-  {
-    "title": "The Three-Body Problem",
-    "author": "Cixin Liu",
-    "url": "https://chapter-summaries.com/books/the-three-body-problem/",
-    "slug": "the-three-body-problem",
-    "total_chapters": 35
-  },
-  {
-    "title": "The Night Circus",
-    "author": "Erin Morgenstern",
-    "url": "https://chapter-summaries.com/books/the-night-circus/",
-    "slug": "the-night-circus",
-    "total_chapters": 75
-  },
-  {
-    "title": "The Secret History",
-    "author": "Donna Tartt",
-    "url": "https://chapter-summaries.com/books/the-secret-history/",
-    "slug": "the-secret-history",
-    "total_chapters": 10
-  },
-  {
-    "title": "Blood Over Bright Haven: A Novel",
-    "author": "M. L. Wang",
-    "url": "https://chapter-summaries.com/books/blood-over-bright-haven/",
-    "slug": "blood-over-bright-haven",
-    "total_chapters": 23
-  },
-  {
-    "title": "Embassytown: A Novel",
-    "author": "China Miéville",
-    "url": "https://chapter-summaries.com/books/embassytown/",
-    "slug": "embassytown",
-    "total_chapters": 45
-  },
-  {
-    "title": "Run: A Novel",
-    "author": "Blake Crouch",
-    "url": "https://chapter-summaries.com/books/run/",
-    "slug": "run",
-    "total_chapters": 38
-  },
-  {
-    "title": "Herscht 07769",
-    "author": "László Krasznahorkai",
-    "url": "https://chapter-summaries.com/books/herscht-07769/",
-    "slug": "herscht-07769",
-    "total_chapters": 14
-  },
-  {
-    "title": "South of Nowhere",
-    "author": "Jeffery Deaver",
-    "url": "https://chapter-summaries.com/books/south-of-nowhere/",
-    "slug": "south-of-nowhere",
-    "total_chapters": 72
-  },
-  {
-    "title": "Dark Matter",
-    "author": "Blake Crouch",
-    "url": "https://chapter-summaries.com/books/dark-matter/",
-    "slug": "dark-matter",
-    "total_chapters": 15
-  },
-  {
-    "title": "The Martian",
-    "author": "Andy Weir",
-    "url": "https://chapter-summaries.com/books/the-martian/",
-    "slug": "the-martian",
-    "total_chapters": 26
+    "title": "Onyx Storm",
+    "author": "Rebecca Yarros",
+    "url": "https://chapter-summaries.com/books/onyx-storm/",
+    "total_chapters": 68,
+    "slug": "onyx-storm",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/onyx-storm.webp"
   },
   {
     "title": "We Used to Live Here",
     "author": "Marcus Kliewer",
     "url": "https://chapter-summaries.com/books/we-used-to-live-here/",
+    "total_chapters": 23,
     "slug": "we-used-to-live-here",
-    "total_chapters": 23
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/we-used-to-live-here.webp"
   },
   {
-    "title": "Gone Girl",
-    "author": "Gillian Flynn",
-    "url": "https://chapter-summaries.com/books/gone-girl/",
-    "slug": "gone-girl",
-    "total_chapters": 68
+    "title": "Kill for Me, Kill for You",
+    "author": "Steve Cavanagh",
+    "url": "https://chapter-summaries.com/books/kill-for-me-kill-for-you/",
+    "total_chapters": 64,
+    "slug": "kill-for-me-kill-for-you",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/kill-for-me-kill-for-you.webp"
   },
   {
-    "title": "Blindsighted",
-    "author": "Karin Slaughter",
-    "url": "https://chapter-summaries.com/books/blindsighted/",
-    "slug": "blindsighted",
-    "total_chapters": 30
-  },
-  {
-    "title": "Incidents Around the House: A Novel",
-    "author": "Josh Malerman",
-    "url": "https://chapter-summaries.com/books/incidents-around-the-house/",
-    "slug": "incidents-around-the-house",
-    "total_chapters": 51
-  },
-  {
-    "title": "The Women",
-    "author": "Kristin Hannah",
-    "url": "https://chapter-summaries.com/books/the-women/",
-    "slug": "the-women",
-    "total_chapters": 35
-  },
-  {
-    "title": "Alone: A Detective D. D. Warren Novel",
-    "author": "Lisa Gardner",
-    "url": "https://chapter-summaries.com/books/alone/",
-    "slug": "alone",
-    "total_chapters": 41
-  },
-  {
-    "title": "The Hunchback of Notre Dame",
-    "author": "Victor Hugo",
-    "url": "https://chapter-summaries.com/books/the-hunchback-of-notre-dame/",
-    "slug": "the-hunchback-of-notre-dame",
-    "total_chapters": 52
-  },
-  {
-    "title": "Wake Up and Open Your Eyes",
-    "author": "Clay McLeod Chapman",
-    "url": "https://chapter-summaries.com/books/wake-up-and-open-your-eyes/",
-    "slug": "wake-up-and-open-your-eyes",
-    "total_chapters": 18
-  },
-  {
-    "title": "Mind Games",
-    "author": "Nora Roberts",
-    "url": "https://chapter-summaries.com/books/mind-games/",
-    "slug": "mind-games",
-    "total_chapters": 30
-  },
-  {
-    "title": "The Ravenous Dead",
-    "author": "Darcy Coates",
-    "url": "https://chapter-summaries.com/books/the-ravenous-dead/",
-    "slug": "the-ravenous-dead",
-    "total_chapters": 32
-  },
-  {
-    "title": "A Better World",
-    "author": "Sarah Langan",
-    "url": "https://chapter-summaries.com/books/a-better-world/",
-    "slug": "a-better-world",
-    "total_chapters": 34
-  },
-  {
-    "title": "The King in Yellow",
-    "author": "Robert W Chambers",
-    "url": "https://chapter-summaries.com/books/the-king-in-yellow/",
-    "slug": "the-king-in-yellow",
-    "total_chapters": 11
-  },
-  {
-    "title": "The Loney",
-    "author": "Andrew Michael Hurley",
-    "url": "https://chapter-summaries.com/books/the-loney/",
-    "slug": "the-loney",
-    "total_chapters": 29
-  },
-  {
-    "title": "13 Months Haunted",
-    "author": "Jimmy Juliano",
-    "url": "https://chapter-summaries.com/books/13-months-haunted/",
-    "slug": "13-months-haunted",
-    "total_chapters": 44
-  },
-  {
-    "title": "The Faith of Beasts",
-    "author": "James S. A. Corey",
-    "url": "https://chapter-summaries.com/books/the-faith-of-beasts/",
-    "slug": "the-faith-of-beasts",
-    "total_chapters": 38
-  },
-  {
-    "title": "No Exit",
-    "author": "Taylor Adams",
-    "url": "https://chapter-summaries.com/books/no-exit/",
-    "slug": "no-exit",
-    "total_chapters": 25
-  },
-  {
-    "title": "The Last Word",
-    "author": "Taylor Adams",
-    "url": "https://chapter-summaries.com/books/the-last-word/",
-    "slug": "the-last-word",
-    "total_chapters": 43
-  },
-  {
-    "title": "Witchcraft for Wayward Girls",
-    "author": "Grady Hendrix",
-    "url": "https://chapter-summaries.com/books/witchcraft-for-wayward-girls/",
-    "slug": "witchcraft-for-wayward-girls",
-    "total_chapters": 36
-  },
-  {
-    "title": "The Hollow Places: A Novel",
-    "author": "T. Kingfisher",
-    "url": "https://chapter-summaries.com/books/the-hollow-places/",
-    "slug": "the-hollow-places",
-    "total_chapters": 22
-  },
-  {
-    "title": "The Night We Lost Him",
-    "author": "Laura Dave",
-    "url": "https://chapter-summaries.com/books/the-night-we-lost-him/",
-    "slug": "the-night-we-lost-him",
-    "total_chapters": 50
+    "title": "The Scarlet Letter",
+    "author": "Nathaniel Hawthorne",
+    "url": "https://chapter-summaries.com/books/the-scarlet-letter/",
+    "total_chapters": 24,
+    "slug": "the-scarlet-letter",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-scarlet-letter.webp"
   },
   {
     "title": "The Eye of the Bedlam Bride",
     "author": "Matt Dinniman",
     "url": "https://chapter-summaries.com/books/the-eye-of-the-bedlam-bride/",
+    "total_chapters": 74,
     "slug": "the-eye-of-the-bedlam-bride",
-    "total_chapters": 74
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-eye-of-the-bedlam-bride.webp"
   },
   {
-    "title": "The Last One at the Wedding",
-    "author": "Jason Rekulak",
-    "url": "https://chapter-summaries.com/books/the-last-one-at-the-wedding/",
-    "slug": "the-last-one-at-the-wedding",
-    "total_chapters": 50
+    "title": "Famous: A Novel",
+    "author": "Blake Crouch",
+    "url": "https://chapter-summaries.com/books/famous/",
+    "total_chapters": 26,
+    "slug": "famous",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/famous.webp"
   },
   {
-    "title": "Her Last Breath",
-    "author": "Taylor Adams",
-    "url": "https://chapter-summaries.com/books/her-last-breath/",
-    "slug": "her-last-breath",
-    "total_chapters": 52
+    "title": "Tom's Crossing: A Novel",
+    "author": "Mark Z. Danielewski",
+    "url": "https://chapter-summaries.com/books/toms-crossing/",
+    "total_chapters": 27,
+    "slug": "toms-crossing",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/toms-crossing.webp"
   },
   {
-    "title": "This Inevitable Ruin",
-    "author": "Matt Dinniman",
-    "url": "https://chapter-summaries.com/books/this-inevitable-ruin/",
-    "slug": "this-inevitable-ruin",
-    "total_chapters": 100
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "url": "https://chapter-summaries.com/books/fahrenheit-451/",
+    "total_chapters": 3,
+    "slug": "fahrenheit-451",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/fahrenheit-451.webp"
   },
   {
-    "title": "Vigil: A Novel",
-    "author": "George Saunders",
-    "url": "https://chapter-summaries.com/books/vigil/",
-    "slug": "vigil",
-    "total_chapters": 1
-  },
-  {
-    "title": "Crux: A Novel",
-    "author": "Gabriel Tallent",
-    "url": "https://chapter-summaries.com/books/crux/",
-    "slug": "crux",
-    "total_chapters": 41
-  },
-  {
-    "title": "The Gate of the Feral Gods",
-    "author": "Matt Dinniman",
-    "url": "https://chapter-summaries.com/books/the-gate-of-the-feral-gods/",
-    "slug": "the-gate-of-the-feral-gods",
-    "total_chapters": 38
-  },
-  {
-    "title": "The Dungeon Anarchist's Cookbook",
-    "author": "Matt Dinniman",
-    "url": "https://chapter-summaries.com/books/the-dungeon-anarchists-cookbook/",
-    "slug": "the-dungeon-anarchists-cookbook",
-    "total_chapters": 35
-  },
-  {
-    "title": "Dungeon Crawler Carl",
-    "author": "Matt Dinniman",
-    "url": "https://chapter-summaries.com/books/dungeon-crawler-carl/",
-    "slug": "dungeon-crawler-carl",
-    "total_chapters": 48
-  },
-  {
-    "title": "Not Quite Dead Yet: A Novel",
-    "author": "Holly Jackson",
-    "url": "https://chapter-summaries.com/books/not-quite-dead-yet/",
-    "slug": "not-quite-dead-yet",
-    "total_chapters": 33
-  },
-  {
-    "title": "The Mercy of Gods",
+    "title": "The Faith of Beasts",
     "author": "James S. A. Corey",
-    "url": "https://chapter-summaries.com/books/the-mercy-of-gods/",
-    "slug": "the-mercy-of-gods",
-    "total_chapters": 36
+    "url": "https://chapter-summaries.com/books/the-faith-of-beasts/",
+    "total_chapters": 38,
+    "slug": "the-faith-of-beasts",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-faith-of-beasts.webp"
   },
   {
-    "title": "Carl's Doomsday Scenario",
-    "author": "Matt Dinniman",
-    "url": "https://chapter-summaries.com/books/carls-doomsday-scenario/",
-    "slug": "carls-doomsday-scenario",
-    "total_chapters": 26
+    "title": "The Three-Body Problem",
+    "author": "Cixin Liu",
+    "url": "https://chapter-summaries.com/books/the-three-body-problem/",
+    "total_chapters": 35,
+    "slug": "the-three-body-problem",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-three-body-problem.webp"
   },
   {
-    "title": "The Butcher's Masquerade",
-    "author": "Matt Dinniman",
-    "url": "https://chapter-summaries.com/books/the-butchers-masquerade/",
-    "slug": "the-butchers-masquerade",
-    "total_chapters": 78
+    "title": "The Covenant of Water",
+    "author": "Abraham Verghese",
+    "url": "https://chapter-summaries.com/books/the-covenant-of-water/",
+    "total_chapters": 84,
+    "slug": "the-covenant-of-water",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-covenant-of-water.webp"
   },
   {
-    "title": "Boy's Life",
-    "author": "Robert McCammon",
-    "url": "https://chapter-summaries.com/books/boys-life/",
-    "slug": "boys-life",
-    "total_chapters": 33
-  },
-  {
-    "title": "Upward Bound: A Novel",
-    "author": "Woody Brown",
-    "url": "https://chapter-summaries.com/books/upward-bound/",
-    "slug": "upward-bound",
-    "total_chapters": 12
+    "title": "Strangers in Time",
+    "author": "David Baldacci",
+    "url": "https://chapter-summaries.com/books/strangers-in-time/",
+    "total_chapters": 88,
+    "slug": "strangers-in-time",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/strangers-in-time.webp"
   },
   {
     "title": "Red Rising",
     "author": "Pierce Brown",
     "url": "https://chapter-summaries.com/books/red-rising/",
+    "total_chapters": 45,
     "slug": "red-rising",
-    "total_chapters": 45
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/red-rising.webp"
   },
   {
-    "title": "Livesuit",
-    "author": "James S. A. Corey",
-    "url": "https://chapter-summaries.com/books/livesuit/",
-    "slug": "livesuit",
-    "total_chapters": 1
+    "title": "Blood Over Bright Haven: A Novel",
+    "author": "M. L. Wang",
+    "url": "https://chapter-summaries.com/books/blood-over-bright-haven/",
+    "total_chapters": 23,
+    "slug": "blood-over-bright-haven",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/blood-over-bright-haven.webp"
   },
   {
-    "title": "Nowhere Burning",
-    "author": "Catriona Ward",
-    "url": "https://chapter-summaries.com/books/nowhere-burning/",
-    "slug": "nowhere-burning",
-    "total_chapters": 23
+    "title": "The City & the City: A Novel",
+    "author": "China Miéville",
+    "url": "https://chapter-summaries.com/books/the-city-and-the-city/",
+    "total_chapters": 29,
+    "slug": "the-city-and-the-city",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-city-and-the-city.webp"
   },
   {
-    "title": "Things Fall Apart",
-    "author": "Chinua Achebe",
-    "url": "https://chapter-summaries.com/books/things-fall-apart/",
-    "slug": "things-fall-apart",
-    "total_chapters": 25
+    "title": "Horror Movie",
+    "author": "Paul Tremblay",
+    "url": "https://chapter-summaries.com/books/horror-movie/",
+    "total_chapters": 33,
+    "slug": "horror-movie",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/horror-movie.webp"
   },
   {
-    "title": "Good Boy",
-    "author": "Neil McRobert",
-    "url": "https://chapter-summaries.com/books/good-boy/",
-    "slug": "good-boy",
-    "total_chapters": 3
+    "title": "The Secret History",
+    "author": "Donna Tartt",
+    "url": "https://chapter-summaries.com/books/the-secret-history/",
+    "total_chapters": 10,
+    "slug": "the-secret-history",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-secret-history.webp"
   },
   {
-    "title": "The Boy Who Harnessed the Wind",
-    "author": "William Kamkwamba, Bryan Mealer",
-    "url": "https://chapter-summaries.com/books/the-boy-who-harnessed-the-wind/",
-    "slug": "the-boy-who-harnessed-the-wind",
-    "total_chapters": 17
+    "title": "Summit Lake",
+    "author": "Charlie Donlea",
+    "url": "https://chapter-summaries.com/books/summit-lake/",
+    "total_chapters": 51,
+    "slug": "summit-lake",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/summit-lake.webp"
   },
   {
-    "title": "Last One Out",
-    "author": "Jane Harper",
-    "url": "https://chapter-summaries.com/books/last-one-out/",
-    "slug": "last-one-out",
-    "total_chapters": 44
+    "title": "Hidden Nature",
+    "author": "Nora Roberts",
+    "url": "https://chapter-summaries.com/books/hidden-nature/",
+    "total_chapters": 31,
+    "slug": "hidden-nature",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/hidden-nature.webp"
   },
   {
-    "title": "All We Trust",
-    "author": "Gregory Galloway",
-    "url": "https://chapter-summaries.com/books/all-we-trust/",
-    "slug": "all-we-trust",
-    "total_chapters": 51
+    "title": "The King in Yellow",
+    "author": "Robert W Chambers",
+    "url": "https://chapter-summaries.com/books/the-king-in-yellow/",
+    "total_chapters": 11,
+    "slug": "the-king-in-yellow",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-king-in-yellow.webp"
   },
   {
-    "title": "You'll Never Know",
-    "author": "Caleb Stephens",
-    "url": "https://chapter-summaries.com/books/youll-never-know/",
-    "slug": "youll-never-know",
-    "total_chapters": 52
+    "title": "A Calamity of Souls",
+    "author": "David Baldacci",
+    "url": "https://chapter-summaries.com/books/a-calamity-of-souls/",
+    "total_chapters": 93,
+    "slug": "a-calamity-of-souls",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/a-calamity-of-souls.webp"
   },
   {
-    "title": "Nowhere: A Novel",
-    "author": "Allison Gunn",
-    "url": "https://chapter-summaries.com/books/nowhere/",
-    "slug": "nowhere",
-    "total_chapters": 42
+    "title": "The Night Circus",
+    "author": "Erin Morgenstern",
+    "url": "https://chapter-summaries.com/books/the-night-circus/",
+    "total_chapters": 75,
+    "slug": "the-night-circus",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-night-circus.webp"
   },
   {
-    "title": "Lord of the Flies",
-    "author": "William Golding",
-    "url": "https://chapter-summaries.com/books/lord-of-the-flies/",
-    "slug": "lord-of-the-flies",
-    "total_chapters": 12
+    "title": "The Dungeon Anarchist's Cookbook",
+    "author": "Matt Dinniman",
+    "url": "https://chapter-summaries.com/books/the-dungeon-anarchists-cookbook/",
+    "total_chapters": 35,
+    "slug": "the-dungeon-anarchists-cookbook",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-dungeon-anarchists-cookbook.webp"
+  },
+  {
+    "title": "Dark Matter",
+    "author": "Blake Crouch",
+    "url": "https://chapter-summaries.com/books/dark-matter/",
+    "total_chapters": 15,
+    "slug": "dark-matter",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/dark-matter.webp"
+  },
+  {
+    "title": "Dungeon Crawler Carl",
+    "author": "Matt Dinniman",
+    "url": "https://chapter-summaries.com/books/dungeon-crawler-carl/",
+    "total_chapters": 48,
+    "slug": "dungeon-crawler-carl",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/dungeon-crawler-carl.webp"
+  },
+  {
+    "title": "The Martian",
+    "author": "Andy Weir",
+    "url": "https://chapter-summaries.com/books/the-martian/",
+    "total_chapters": 26,
+    "slug": "the-martian",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-martian.webp"
+  },
+  {
+    "title": "Blindsighted",
+    "author": "Karin Slaughter",
+    "url": "https://chapter-summaries.com/books/blindsighted/",
+    "total_chapters": 30,
+    "slug": "blindsighted",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/blindsighted.webp"
+  },
+  {
+    "title": "Embassytown: A Novel",
+    "author": "China Miéville",
+    "url": "https://chapter-summaries.com/books/embassytown/",
+    "total_chapters": 45,
+    "slug": "embassytown",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/embassytown.webp"
+  },
+  {
+    "title": "Run: A Novel",
+    "author": "Blake Crouch",
+    "url": "https://chapter-summaries.com/books/run/",
+    "total_chapters": 38,
+    "slug": "run",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/run.webp"
+  },
+  {
+    "title": "Herscht 07769",
+    "author": "László Krasznahorkai",
+    "url": "https://chapter-summaries.com/books/herscht-07769/",
+    "total_chapters": 14,
+    "slug": "herscht-07769",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/herscht-07769.webp"
+  },
+  {
+    "title": "South of Nowhere",
+    "author": "Jeffery Deaver",
+    "url": "https://chapter-summaries.com/books/south-of-nowhere/",
+    "total_chapters": 72,
+    "slug": "south-of-nowhere",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/south-of-nowhere.webp"
+  },
+  {
+    "title": "This Inevitable Ruin",
+    "author": "Matt Dinniman",
+    "url": "https://chapter-summaries.com/books/this-inevitable-ruin/",
+    "total_chapters": 100,
+    "slug": "this-inevitable-ruin",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/this-inevitable-ruin.webp"
+  },
+  {
+    "title": "Gone Girl",
+    "author": "Gillian Flynn",
+    "url": "https://chapter-summaries.com/books/gone-girl/",
+    "total_chapters": 68,
+    "slug": "gone-girl",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/gone-girl.webp"
+  },
+  {
+    "title": "The Women",
+    "author": "Kristin Hannah",
+    "url": "https://chapter-summaries.com/books/the-women/",
+    "total_chapters": 35,
+    "slug": "the-women",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-women.webp"
+  },
+  {
+    "title": "The Gate of the Feral Gods",
+    "author": "Matt Dinniman",
+    "url": "https://chapter-summaries.com/books/the-gate-of-the-feral-gods/",
+    "total_chapters": 38,
+    "slug": "the-gate-of-the-feral-gods",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-gate-of-the-feral-gods.webp"
+  },
+  {
+    "title": "The Hunchback of Notre Dame",
+    "author": "Victor Hugo",
+    "url": "https://chapter-summaries.com/books/the-hunchback-of-notre-dame/",
+    "total_chapters": 52,
+    "slug": "the-hunchback-of-notre-dame",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-hunchback-of-notre-dame.webp"
+  },
+  {
+    "title": "Incidents Around the House: A Novel",
+    "author": "Josh Malerman",
+    "url": "https://chapter-summaries.com/books/incidents-around-the-house/",
+    "total_chapters": 51,
+    "slug": "incidents-around-the-house",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/incidents-around-the-house.webp"
+  },
+  {
+    "title": "Mind Games",
+    "author": "Nora Roberts",
+    "url": "https://chapter-summaries.com/books/mind-games/",
+    "total_chapters": 30,
+    "slug": "mind-games",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/mind-games.webp"
   },
   {
     "title": "Morning Star",
     "author": "Pierce Brown",
     "url": "https://chapter-summaries.com/books/morning-star/",
+    "total_chapters": 67,
     "slug": "morning-star",
-    "total_chapters": 67
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/morning-star.webp"
   },
   {
-    "title": "Iron Gold",
+    "title": "Wake Up and Open Your Eyes",
+    "author": "Clay McLeod Chapman",
+    "url": "https://chapter-summaries.com/books/wake-up-and-open-your-eyes/",
+    "total_chapters": 18,
+    "slug": "wake-up-and-open-your-eyes",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/wake-up-and-open-your-eyes.webp"
+  },
+  {
+    "title": "Alone: A Detective D. D. Warren Novel",
+    "author": "Lisa Gardner",
+    "url": "https://chapter-summaries.com/books/alone/",
+    "total_chapters": 41,
+    "slug": "alone",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/alone.webp"
+  },
+  {
+    "title": "A Better World",
+    "author": "Sarah Langan",
+    "url": "https://chapter-summaries.com/books/a-better-world/",
+    "total_chapters": 34,
+    "slug": "a-better-world",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/a-better-world.webp"
+  },
+  {
+    "title": "The Ravenous Dead",
+    "author": "Darcy Coates",
+    "url": "https://chapter-summaries.com/books/the-ravenous-dead/",
+    "total_chapters": 32,
+    "slug": "the-ravenous-dead",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-ravenous-dead.webp"
+  },
+  {
+    "title": "No Exit",
+    "author": "Taylor Adams",
+    "url": "https://chapter-summaries.com/books/no-exit/",
+    "total_chapters": 25,
+    "slug": "no-exit",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/no-exit.webp"
+  },
+  {
+    "title": "The Last Word",
+    "author": "Taylor Adams",
+    "url": "https://chapter-summaries.com/books/the-last-word/",
+    "total_chapters": 43,
+    "slug": "the-last-word",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-last-word.webp"
+  },
+  {
+    "title": "The Loney",
+    "author": "Andrew Michael Hurley",
+    "url": "https://chapter-summaries.com/books/the-loney/",
+    "total_chapters": 29,
+    "slug": "the-loney",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-loney.webp"
+  },
+  {
+    "title": "The Hollow Places: A Novel",
+    "author": "T. Kingfisher",
+    "url": "https://chapter-summaries.com/books/the-hollow-places/",
+    "total_chapters": 22,
+    "slug": "the-hollow-places",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-hollow-places.webp"
+  },
+  {
+    "title": "13 Months Haunted",
+    "author": "Jimmy Juliano",
+    "url": "https://chapter-summaries.com/books/13-months-haunted/",
+    "total_chapters": 44,
+    "slug": "13-months-haunted",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/13-months-haunted.webp"
+  },
+  {
+    "title": "Dark Age",
     "author": "Pierce Brown",
-    "url": "https://chapter-summaries.com/books/iron-gold/",
-    "slug": "iron-gold",
-    "total_chapters": 66
+    "url": "https://chapter-summaries.com/books/dark-age/",
+    "total_chapters": 94,
+    "slug": "dark-age",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/dark-age.webp"
   },
   {
-    "title": "Eminence Front",
-    "author": "Rebecca Rowland",
-    "url": "https://chapter-summaries.com/books/eminence-front/",
-    "slug": "eminence-front",
-    "total_chapters": 23
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoyevsky",
+    "url": "https://chapter-summaries.com/books/the-brothers-karamazov/",
+    "total_chapters": 96,
+    "slug": "the-brothers-karamazov",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-brothers-karamazov.webp"
   },
   {
-    "title": "A Long Time Gone",
-    "author": "Joshua Moehling",
-    "url": "https://chapter-summaries.com/books/a-long-time-gone/",
-    "slug": "a-long-time-gone",
-    "total_chapters": 40
+    "title": "Witchcraft for Wayward Girls",
+    "author": "Grady Hendrix",
+    "url": "https://chapter-summaries.com/books/witchcraft-for-wayward-girls/",
+    "total_chapters": 36,
+    "slug": "witchcraft-for-wayward-girls",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/witchcraft-for-wayward-girls.webp"
   },
   {
-    "title": "And There He Kept Her",
-    "author": "Joshua Moehling",
-    "url": "https://chapter-summaries.com/books/and-there-he-kept-her/",
-    "slug": "and-there-he-kept-her",
-    "total_chapters": 32
+    "title": "Her Last Breath",
+    "author": "Taylor Adams",
+    "url": "https://chapter-summaries.com/books/her-last-breath/",
+    "total_chapters": 52,
+    "slug": "her-last-breath",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/her-last-breath.webp"
   },
   {
-    "title": "Beneath a Broken Sky",
-    "author": "Joshua Moehling",
-    "url": "https://chapter-summaries.com/books/beneath-a-broken-sky/",
-    "slug": "beneath-a-broken-sky",
-    "total_chapters": 49
+    "title": "The Night We Lost Him",
+    "author": "Laura Dave",
+    "url": "https://chapter-summaries.com/books/the-night-we-lost-him/",
+    "total_chapters": 50,
+    "slug": "the-night-we-lost-him",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-night-we-lost-him.webp"
   },
   {
-    "title": "Where the Dead Sleep",
-    "author": "Joshua Moehling",
-    "url": "https://chapter-summaries.com/books/where-the-dead-sleep/",
-    "slug": "where-the-dead-sleep",
-    "total_chapters": 33
+    "title": "The Butcher's Masquerade",
+    "author": "Matt Dinniman",
+    "url": "https://chapter-summaries.com/books/the-butchers-masquerade/",
+    "total_chapters": 78,
+    "slug": "the-butchers-masquerade",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-butchers-masquerade.webp"
+  },
+  {
+    "title": "Carl's Doomsday Scenario",
+    "author": "Matt Dinniman",
+    "url": "https://chapter-summaries.com/books/carls-doomsday-scenario/",
+    "total_chapters": 26,
+    "slug": "carls-doomsday-scenario",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/carls-doomsday-scenario.webp"
+  },
+  {
+    "title": "The Last One at the Wedding",
+    "author": "Jason Rekulak",
+    "url": "https://chapter-summaries.com/books/the-last-one-at-the-wedding/",
+    "total_chapters": 50,
+    "slug": "the-last-one-at-the-wedding",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-last-one-at-the-wedding.webp"
+  },
+  {
+    "title": "Not Quite Dead Yet: A Novel",
+    "author": "Holly Jackson",
+    "url": "https://chapter-summaries.com/books/not-quite-dead-yet/",
+    "total_chapters": 33,
+    "slug": "not-quite-dead-yet",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/not-quite-dead-yet.webp"
+  },
+  {
+    "title": "Vigil: A Novel",
+    "author": "George Saunders",
+    "url": "https://chapter-summaries.com/books/vigil/",
+    "total_chapters": 1,
+    "slug": "vigil",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/vigil.webp"
+  },
+  {
+    "title": "Crux: A Novel",
+    "author": "Gabriel Tallent",
+    "url": "https://chapter-summaries.com/books/crux/",
+    "total_chapters": 41,
+    "slug": "crux",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/crux.webp"
+  },
+  {
+    "title": "The Mercy of Gods",
+    "author": "James S. A. Corey",
+    "url": "https://chapter-summaries.com/books/the-mercy-of-gods/",
+    "total_chapters": 36,
+    "slug": "the-mercy-of-gods",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-mercy-of-gods.webp"
+  },
+  {
+    "title": "You'll Never Know",
+    "author": "Caleb Stephens",
+    "url": "https://chapter-summaries.com/books/youll-never-know/",
+    "total_chapters": 52,
+    "slug": "youll-never-know",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/youll-never-know.webp"
+  },
+  {
+    "title": "Livesuit",
+    "author": "James S. A. Corey",
+    "url": "https://chapter-summaries.com/books/livesuit/",
+    "total_chapters": 1,
+    "slug": "livesuit",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/livesuit.webp"
+  },
+  {
+    "title": "Things Fall Apart",
+    "author": "Chinua Achebe",
+    "url": "https://chapter-summaries.com/books/things-fall-apart/",
+    "total_chapters": 25,
+    "slug": "things-fall-apart",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/things-fall-apart.webp"
   },
   {
     "title": "Golden Son",
     "author": "Pierce Brown",
     "url": "https://chapter-summaries.com/books/golden-son/",
+    "total_chapters": 52,
     "slug": "golden-son",
-    "total_chapters": 52
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/golden-son.webp"
   },
   {
-    "title": "The Hive",
-    "author": "Ronald Malfi",
-    "url": "https://chapter-summaries.com/books/the-hive/",
-    "slug": "the-hive",
-    "total_chapters": 66
+    "title": "Light Bringer",
+    "author": "Pierce Brown",
+    "url": "https://chapter-summaries.com/books/light-bringer/",
+    "total_chapters": 89,
+    "slug": "light-bringer",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/light-bringer.webp"
+  },
+  {
+    "title": "Boy's Life",
+    "author": "Robert McCammon",
+    "url": "https://chapter-summaries.com/books/boys-life/",
+    "total_chapters": 33,
+    "slug": "boys-life",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/boys-life.webp"
+  },
+  {
+    "title": "Upward Bound: A Novel",
+    "author": "Woody Brown",
+    "url": "https://chapter-summaries.com/books/upward-bound/",
+    "total_chapters": 12,
+    "slug": "upward-bound",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/upward-bound.webp"
+  },
+  {
+    "title": "Iron Gold",
+    "author": "Pierce Brown",
+    "url": "https://chapter-summaries.com/books/iron-gold/",
+    "total_chapters": 66,
+    "slug": "iron-gold",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/iron-gold.webp"
+  },
+  {
+    "title": "Last One Out",
+    "author": "Jane Harper",
+    "url": "https://chapter-summaries.com/books/last-one-out/",
+    "total_chapters": 44,
+    "slug": "last-one-out",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/last-one-out.webp"
+  },
+  {
+    "title": "Nowhere Burning",
+    "author": "Catriona Ward",
+    "url": "https://chapter-summaries.com/books/nowhere-burning/",
+    "total_chapters": 23,
+    "slug": "nowhere-burning",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/nowhere-burning.webp"
+  },
+  {
+    "title": "The Boy Who Harnessed the Wind",
+    "author": "William Kamkwamba, Bryan Mealer",
+    "url": "https://chapter-summaries.com/books/the-boy-who-harnessed-the-wind/",
+    "total_chapters": 17,
+    "slug": "the-boy-who-harnessed-the-wind",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-boy-who-harnessed-the-wind.webp"
+  },
+  {
+    "title": "Lord of the Flies",
+    "author": "William Golding",
+    "url": "https://chapter-summaries.com/books/lord-of-the-flies/",
+    "total_chapters": 12,
+    "slug": "lord-of-the-flies",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/lord-of-the-flies.webp"
+  },
+  {
+    "title": "Demons",
+    "author": "Fyodor Dostoyevsky",
+    "url": "https://chapter-summaries.com/books/demons/",
+    "total_chapters": 23,
+    "slug": "demons",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/demons.webp"
+  },
+  {
+    "title": "Katabasis",
+    "author": "R. F. Kuang",
+    "url": "https://chapter-summaries.com/books/katabasis/",
+    "total_chapters": 39,
+    "slug": "katabasis",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/katabasis.webp"
+  },
+  {
+    "title": "Good Boy",
+    "author": "Neil McRobert",
+    "url": "https://chapter-summaries.com/books/good-boy/",
+    "total_chapters": 3,
+    "slug": "good-boy",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/good-boy.webp"
+  },
+  {
+    "title": "Nowhere: A Novel",
+    "author": "Allison Gunn",
+    "url": "https://chapter-summaries.com/books/nowhere/",
+    "total_chapters": 42,
+    "slug": "nowhere",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/nowhere.webp"
+  },
+  {
+    "title": "All We Trust",
+    "author": "Gregory Galloway",
+    "url": "https://chapter-summaries.com/books/all-we-trust/",
+    "total_chapters": 51,
+    "slug": "all-we-trust",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/all-we-trust.webp"
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoyevsky",
+    "url": "https://chapter-summaries.com/books/crime-and-punishment/",
+    "total_chapters": 40,
+    "slug": "crime-and-punishment",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/crime-and-punishment.webp"
+  },
+  {
+    "title": "A Long Time Gone",
+    "author": "Joshua Moehling",
+    "url": "https://chapter-summaries.com/books/a-long-time-gone/",
+    "total_chapters": 40,
+    "slug": "a-long-time-gone",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/a-long-time-gone.webp"
+  },
+  {
+    "title": "Yellowface",
+    "author": "R. F. Kuang",
+    "url": "https://chapter-summaries.com/books/yellowface/",
+    "total_chapters": 24,
+    "slug": "yellowface",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/yellowface.webp"
   },
   {
     "title": "The Girl with a Thousand Faces",
     "author": "Sunyi Dean",
     "url": "https://chapter-summaries.com/books/the-girl-with-a-thousand-faces/",
+    "total_chapters": 40,
     "slug": "the-girl-with-a-thousand-faces",
-    "total_chapters": 40
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-girl-with-a-thousand-faces.webp"
+  },
+  {
+    "title": "The Adventures of Amina al-Sirafi",
+    "author": "Shannon Chakraborty",
+    "url": "https://chapter-summaries.com/books/the-adventures-of-amina-al-sira/",
+    "total_chapters": 48,
+    "slug": "the-adventures-of-amina-al-sira",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-adventures-of-amina-al-sira.webp"
+  },
+  {
+    "title": "And There He Kept Her",
+    "author": "Joshua Moehling",
+    "url": "https://chapter-summaries.com/books/and-there-he-kept-her/",
+    "total_chapters": 32,
+    "slug": "and-there-he-kept-her",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/and-there-he-kept-her.webp"
+  },
+  {
+    "title": "Beneath a Broken Sky",
+    "author": "Joshua Moehling",
+    "url": "https://chapter-summaries.com/books/beneath-a-broken-sky/",
+    "total_chapters": 49,
+    "slug": "beneath-a-broken-sky",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/beneath-a-broken-sky.webp"
+  },
+  {
+    "title": "Eminence Front",
+    "author": "Rebecca Rowland",
+    "url": "https://chapter-summaries.com/books/eminence-front/",
+    "total_chapters": 23,
+    "slug": "eminence-front",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/eminence-front.webp"
+  },
+  {
+    "title": "Where the Dead Sleep",
+    "author": "Joshua Moehling",
+    "url": "https://chapter-summaries.com/books/where-the-dead-sleep/",
+    "total_chapters": 33,
+    "slug": "where-the-dead-sleep",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/where-the-dead-sleep.webp"
+  },
+  {
+    "title": "The Water Outlaws",
+    "author": "S. L. Huang",
+    "url": "https://chapter-summaries.com/books/the-water-outlaws/",
+    "total_chapters": 35,
+    "slug": "the-water-outlaws",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-water-outlaws.webp"
+  },
+  {
+    "title": "The Hive",
+    "author": "Ronald Malfi",
+    "url": "https://chapter-summaries.com/books/the-hive/",
+    "total_chapters": 66,
+    "slug": "the-hive",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-hive.webp"
+  },
+  {
+    "title": "The House in the Cerulean Sea",
+    "author": "TJ Klune",
+    "url": "https://chapter-summaries.com/books/the-house-in-the-cerulean-sea/",
+    "total_chapters": 20,
+    "slug": "the-house-in-the-cerulean-sea",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/the-house-in-the-cerulean-sea.webp"
+  },
+  {
+    "title": "Coffin Moon: A Novel",
+    "author": "Keith Rosson",
+    "url": "https://chapter-summaries.com/books/coffin-moon/",
+    "total_chapters": 43,
+    "slug": "coffin-moon",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/coffin-moon.webp"
+  },
+  {
+    "title": "Clay's Quilt",
+    "author": "Silas House",
+    "url": "https://chapter-summaries.com/books/clays-quilt/",
+    "total_chapters": 30,
+    "slug": "clays-quilt",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/clays-quilt.webp"
+  },
+  {
+    "title": "Acts of God",
+    "author": "Kanan Gill",
+    "url": "https://chapter-summaries.com/books/acts-of-god/",
+    "total_chapters": 32,
+    "slug": "acts-of-god",
+    "cover_image_url": "https://chapter-summaries.com/static/images/covers/acts-of-god.webp"
   }
 ]

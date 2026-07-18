@@ -9,62 +9,68 @@ defmodule PlotlineWeb.UserLive.Settings do
   def render(assigns) do
     ~H"""
     <Layouts.app flash={@flash} current_scope={@current_scope}>
-      <div class="text-center">
-        <.header>
-          Account Settings
-          <:subtitle>Manage your account email address and password settings</:subtitle>
-        </.header>
+      <div class="space-y-8">
+        <div>
+          <h1 class="text-2xl font-bold text-[#212121]">Account Settings</h1>
+          <p class="mt-1 text-sm text-[#212121]/70">
+            Manage your account email address and password settings.
+          </p>
+        </div>
+
+        <.form for={@email_form} id="email_form" phx-submit="update_email" phx-change="validate_email" class="space-y-4">
+          <.input
+            field={@email_form[:email]}
+            type="email"
+            label="Email"
+            autocomplete="username"
+            spellcheck="false"
+            required
+            class="w-full rounded-lg border-0 bg-white px-4 py-3.5 text-[#212121] shadow-md focus:outline-none focus:ring-2 focus:ring-[#74AC8D]"
+          />
+          <Layouts.brand_submit phx-disable-with="Changing...">Change Email</Layouts.brand_submit>
+        </.form>
+
+        <div class="border-t border-[#74AC8D]/30 pt-8" />
+
+        <.form
+          for={@password_form}
+          id="password_form"
+          action={~p"/users/update-password"}
+          method="post"
+          phx-change="validate_password"
+          phx-submit="update_password"
+          phx-trigger-action={@trigger_submit}
+          class="space-y-4"
+        >
+          <input
+            name={@password_form[:email].name}
+            type="hidden"
+            id="hidden_user_email"
+            spellcheck="false"
+            value={@current_email}
+          />
+          <.input
+            field={@password_form[:password]}
+            type="password"
+            label="New password"
+            autocomplete="new-password"
+            spellcheck="false"
+            required
+            class="w-full rounded-lg border-0 bg-white px-4 py-3.5 text-[#212121] shadow-md focus:outline-none focus:ring-2 focus:ring-[#74AC8D]"
+          />
+          <.input
+            field={@password_form[:password_confirmation]}
+            type="password"
+            label="Confirm new password"
+            autocomplete="new-password"
+            spellcheck="false"
+            class="w-full rounded-lg border-0 bg-white px-4 py-3.5 text-[#212121] shadow-md focus:outline-none focus:ring-2 focus:ring-[#74AC8D]"
+          />
+          <Layouts.brand_submit phx-disable-with="Saving...">
+            Save Password
+          </Layouts.brand_submit>
+        </.form>
       </div>
-
-      <.form for={@email_form} id="email_form" phx-submit="update_email" phx-change="validate_email">
-        <.input
-          field={@email_form[:email]}
-          type="email"
-          label="Email"
-          autocomplete="username"
-          spellcheck="false"
-          required
-        />
-        <.button variant="primary" phx-disable-with="Changing...">Change Email</.button>
-      </.form>
-
-      <div class="divider" />
-
-      <.form
-        for={@password_form}
-        id="password_form"
-        action={~p"/users/update-password"}
-        method="post"
-        phx-change="validate_password"
-        phx-submit="update_password"
-        phx-trigger-action={@trigger_submit}
-      >
-        <input
-          name={@password_form[:email].name}
-          type="hidden"
-          id="hidden_user_email"
-          spellcheck="false"
-          value={@current_email}
-        />
-        <.input
-          field={@password_form[:password]}
-          type="password"
-          label="New password"
-          autocomplete="new-password"
-          spellcheck="false"
-          required
-        />
-        <.input
-          field={@password_form[:password_confirmation]}
-          type="password"
-          label="Confirm new password"
-          autocomplete="new-password"
-          spellcheck="false"
-        />
-        <.button variant="primary" phx-disable-with="Saving...">
-          Save Password
-        </.button>
-      </.form>
     </Layouts.app>
     """
   end

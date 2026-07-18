@@ -24,6 +24,23 @@ config :plotline,
   ecto_repos: [Plotline.Repo],
   generators: [timestamp_type: :utc_datetime]
 
+config :plotline, Plotline.CatalogSync, cooldown_ms: :timer.seconds(30)
+
+config :plotline, Plotline.AI,
+  provider: Plotline.AI.Gemini,
+  model: "gemini-flash-lite-latest",
+  api_key: nil,
+  request_retries: 3,
+  retry_base_ms: 20_000
+
+config :plotline, Plotline.Hardcover, api_token: nil
+
+config :plotline, Plotline.PdfUploads, upload_dir: "priv/uploads/pdfs"
+
+config :plotline, Plotline.PdfUploads.Processor,
+  chapter_pause_ms: 2_000,
+  batch_size: 4
+
 # Configure the endpoint
 config :plotline, PlotlineWeb.Endpoint,
   url: [host: "localhost"],
